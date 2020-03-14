@@ -17,6 +17,10 @@ app.use(express.static("public"));
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+require("dotenv").config();
+
+//access secret info
+const apiKey = process.env.ALGOLIA_API_KEY;
 
 // Requiring our routes
 require("./routes/html-routes.js")(app);
