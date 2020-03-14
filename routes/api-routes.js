@@ -48,6 +48,7 @@ module.exports = function(app) {
         email: req.user.email,
         id: req.user.id
       });
+      //add test stuff
     }
   });
 };
